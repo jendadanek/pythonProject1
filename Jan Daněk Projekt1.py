@@ -2,7 +2,7 @@
 
 text1 = '''
 Situated about 10 miles west of Kemmerer, 
-Fossil Butte is a ruggedly impressive 
+Fossil Butte is a ruggedly impressive . 
 topographic feature that rises sharply 
 some 1000 feet above Twin Creek Valley 
 to an elevation of more than 7500 feet 
@@ -13,6 +13,11 @@ text1_split = text1.split()
 vyčištěný_text1 = []
 for slovo in text1_split:
     vyčištěný_text1.append(slovo.strip(".,:;"))
+for slovo in vyčištěný_text1:
+  if slovo == "":
+    vyčištěný_text1.remove(slovo)
+print(vyčištěný_text1)
+
 
 
 text2 = '''At the base of Fossil Butte are the bright 
@@ -27,6 +32,10 @@ text2_split = text2.split()
 vyčištěný_text2 = []
 for slovo in text2_split:
     vyčištěný_text2.append(slovo.strip(".,:;"))
+for slovo in vyčištěný_text2:
+  if slovo == "":
+    vyčištěný_text1.remove(slovo)
+print(vyčištěný_text1)
 
 
 text3 = '''The monument contains 8198 acres and protects 
@@ -42,6 +51,10 @@ text3_split = text3.split()
 vyčištěný_text3 = []
 for slovo in text3_split:
     vyčištěný_text3.append(slovo.strip(".,:;"))
+for slovo in vyčištěný_text2:
+  if slovo == "":
+    vyčištěný_text1.remove(slovo)
+print(vyčištěný_text1)
 
 
 uživatelská_hesla = ["123", "pass123", "password123", "pass123"]
@@ -70,6 +83,7 @@ else:
 
 if výběr_textu not in čísla_textů:
         print(" Neplatný výběr textu. Ukončuji program")
+        exit()
 elif výběr_textu == čísla_textů[0]:
 
         počet_slov = len(vyčištěný_text1)
@@ -165,7 +179,9 @@ elif výběr_textu == čísla_textů[2]:
         for čísla in slovník_délek_a_počtu:
           výsledky.append((čísla,slovník_délek_a_počtu[čísla])) 
         
-        
+
+
+
         
         
 
